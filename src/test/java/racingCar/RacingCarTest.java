@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import racingCar.domain.Car;
 import racingCar.domain.CarStadium;
+import racingCar.domain.Cars;
 import racingCar.exception.InvalidCarNameException;
 
 import static org.assertj.core.api.Assertions.*;
@@ -53,7 +54,7 @@ public class RacingCarTest {
     @Test
     public void 랜덤값_테스트() {
         for (int i = 0; i < 100; ++i) {
-            assertThat(CarStadium.extractRandomNumber())
+            assertThat(Cars.extractRandomNumber())
                     .isGreaterThan(-1)
                     .isLessThan(10);
         }
